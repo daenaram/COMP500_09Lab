@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void print_assessments(int learning_outcome){
+    
+    if(learning_outcome < 1 || learning_outcome > 10) {
+        printf("Invalid Learning Outcome.");
+        return;
+    }
+    
+    
+    if (learning_outcome >= 1 && learning_outcome <= 10){
+        printf("\nReporting Journal");
+    }
+    if (learning_outcome >= 1 && learning_outcome <= 6){
+        printf("\nPractical Test 1");
+    }
+    if (learning_outcome >= 1 && learning_outcome <= 8){
+        printf("\nPractical Test 2");
+    }
+    if (learning_outcome >= 1 && learning_outcome <= 9){
+        printf("\nPractical Test 3");
+    }
+    if (learning_outcome >= 1 && learning_outcome <= 10){
+        printf("\nFinal Practical Exam");
+    }
+    
+}
+
+int main(void){
+    
+    int learning_outcome;
+    
+    printf("Learning Outcome?\n");
+    scanf("%d", &learning_outcome);
+    print_assessments(learning_outcome);
+    return 0;
+}
